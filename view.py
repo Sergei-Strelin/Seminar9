@@ -15,6 +15,7 @@ def start(update, context):
  /edit_user - для редактирования записи''')
 
 
+
 def help(update, context):
     context.bot.send_message(chat_id = update.effective_chat.id,
                              text = '''Для работы со справочником наберите:
@@ -25,6 +26,7 @@ def help(update, context):
  /edit_user - для редактирования записи
  /help - список функций''')
     
+
 
 def view(update, context):
     text_ = view_read_spr(read_spr_file())
@@ -48,6 +50,8 @@ def add_user(update, context):
         'для отказа от добавления записи наберите /stop')    
     
     return 1
+
+
 
 
 def del_user(update, context):
@@ -76,6 +80,7 @@ def edit_user2(update, context):
         '(для отказа от добавления записи наберите /stop)')    
 
     return 2
+
 
 
 def edit_row(update, context):
